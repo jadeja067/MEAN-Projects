@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <input type="radio" class="gender" name="gender" value="male">male
+        <input type="radio" class="gender" name="gender" value="female">Female
+        <input type="submit" onclick="sub(event)" value="submit" draggable="true">
+    </form>
+    <script>
+        input = document.querySelectorAll(".gender")
+        function sub(event) {
+            event.preventDefault()
+            input.forEach(ele => {
+                ele.checked ? console.log(ele.value) : null
+            });
+        }
+    </script>
+</body>
+
+</html>
